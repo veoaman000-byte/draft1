@@ -19,14 +19,18 @@
   function getExtensionRootPath() {
     var path = decodeURI(window.location.pathname || "");
     if (path.charAt(0) === "/" && path.charAt(2) === ":") {
-      path = path.substring(1);
+      path = path.substring(1); // Windows drive letter
     }
-    path = path.replace(/\//g, "\\");
-    return path.replace(/\\index\.html$/i, "");
+    // Remove the filename to get the directory
+    var lastSlashIndex = path.lastIndexOf("/");
+    if (lastSlashIndex !== -1) {
+        path = path.substring(0, lastSlashIndex);
+    }
+    return path;
   }
 
   function ensureHostLoaded(csInterface, callback) {
-    var hostPath = getExtensionRootPath() + "\\jsx\\host.jsx";
+    var hostPath = getExtensionRootPath() + "/jsx/host.jsx";
     var script = "var __zvHostLoadResult = " + quoteForExtendScript("") + ";" +
       "try {" +
       "$.evalFile(new File(" + quoteForExtendScript(hostPath) + "));" +
