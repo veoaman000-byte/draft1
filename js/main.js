@@ -89,8 +89,8 @@
   }
 
   function renderPreviews(layoutData) {
-    window.CaptionPreviewRenderer.render(previewTarget, layoutData);
-    window.CaptionPreviewRenderer.render(previewTargetWords, layoutData);
+    window.DraftMotionPreviewRenderer.render(previewTarget, layoutData);
+    window.DraftMotionPreviewRenderer.render(previewTargetWords, layoutData);
   }
 
   bindImport();

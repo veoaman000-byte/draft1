@@ -55,7 +55,7 @@
     target.appendChild(frame);
   }
 
-  window.CaptionPreviewRenderer = {
+  window.DraftMotionPreviewRenderer = {
     render: render
   };
 }());
