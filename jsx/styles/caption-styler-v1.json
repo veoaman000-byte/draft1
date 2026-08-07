@@ -1,0 +1,39 @@
+{
+  "id": "caption-styler-v1",
+  "name": "Caption Styler V1",
+  "version": "1.0.0",
+  "roles": {
+    "support": {
+      "fontCandidates": ["HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue"],
+      "fill": [1, 1, 1],
+      "sizeRatio": 0.55,
+      "tracking": -10
+    },
+    "hero": {
+      "fontCandidates": ["Grotesk-Medium", "Grotesk", "Europa Grotesk Medium"],
+      "fill": [1, 1, 1],
+      "sizeRatio": 1,
+      "tracking": -20
+    },
+    "accent": {
+      "fontCandidates": ["Griffiths", "Griffiths Regular"],
+      "fill": [1, 0.92, 0],
+      "sizeRatio": 0.92,
+      "tracking": 0
+    }
+  },
+  "layout": {
+    "safeWidth": 0.78,
+    "safeHeight": 0.42,
+    "centerY": 0.5
+  },
+  "animation": {
+    "duration": 0.25,
+    "slideDistance": 34
+  },
+  "shadow": {
+    "opacity": 32,
+    "distance": 3,
+    "softness": 12
+  }
+}
